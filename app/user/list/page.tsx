@@ -10,7 +10,7 @@ interface User {
   email: string;
 }
 
-export default async function IndexPage({
+export default async function UserList({
   searchParams
 }: {
   searchParams: { q: string };
