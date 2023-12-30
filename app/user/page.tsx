@@ -19,7 +19,7 @@ export default async function Login() {
             </div>
         </Card>
         <Card className="mt-6">
-            <Text>Don't have account? &nbsp;<a href="user/new">Create One</a> </Text>
+            <Text>Don&apos;t have account? &nbsp;<a href="user/new">Create One</a> </Text>
         </Card>
     </div>
     </main>
