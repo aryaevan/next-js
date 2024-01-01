@@ -1,4 +1,4 @@
-// import { sql } from '@vercel/postgres';
+import { sql } from '@vercel/postgres';
 import { Card, Title, Text } from '@tremor/react';
 import Search from './search';
 import UsersTable from './table';
@@ -16,12 +16,18 @@ export default async function UserList({
   searchParams: { q: string };
 }) {
   const search = searchParams.q ?? '';
-  // const result = await sql`
-  //   SELECT id, name, username, email 
-  //   FROM users 
-  //   WHERE name ILIKE ${'%' + search + '%'};
-  // `;
-  // const users = result.rows as User[];
+  // WHERE name ILIKE ${'%' + search + '%'} 
+  const result = await sql`
+    SELECT id, name, username, email 
+    FROM users 
+     
+    ;
+  `;
+
+  
+
+  const users = result.rows as User[];
+  // console.log("user result", users);
 
   const fakeusers = [
     {
@@ -45,7 +51,7 @@ export default async function UserList({
       <Text>A list of users retrieved from a Postgres database.</Text>
       <Search />
       <Card className="mt-6">
-        <UsersTable users={fakeusers} />
+        <UsersTable users={users} />
       </Card>
     </main>
   );
