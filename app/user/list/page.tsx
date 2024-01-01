@@ -16,12 +16,18 @@ export default async function UserList({
   searchParams: { q: string };
 }) {
   const search = searchParams.q ?? '';
+  // WHERE name ILIKE ${'%' + search + '%'} 
   const result = await sql`
     SELECT id, name, username, email 
     FROM users 
-    WHERE name ILIKE ${'%' + search + '%'};
+     
+    ;
   `;
+
+  
+
   const users = result.rows as User[];
+  // console.log("user result", users);
 
   const fakeusers = [
     {

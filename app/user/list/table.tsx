@@ -35,9 +35,9 @@ export default function UsersTable({ users }: { users: User[] }) {
             <TableCell>
               <Text>{user.email}</Text>
             </TableCell>
-            <TableCell>
+            {/* <TableCell>
               <Text>Edit</Text>
-            </TableCell>
+            </TableCell> */}
           </TableRow>
         ))}
       </TableBody>
