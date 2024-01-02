@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tremor/react": "^3.12.1",
     "@vercel/postgres": "^0.5.1",
     "next": "14.0.4",
