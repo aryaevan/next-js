@@ -6,9 +6,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Fashion', href: '#', current: false },
+  { name: 'Gadget', href: '#', current: false },
+  { name: 'Automotive', href: '#', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -38,10 +38,11 @@ export default function NavBar() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    src="/shoplogo.svg"
                     alt="Your Company"
                   />
                 </div>
+                {/* Category button */}
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
