@@ -16,6 +16,7 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      backgroundSize:{'cover':'cover'},
       colors: {
         // light mode
         tremor: {
@@ -132,7 +133,8 @@ module.exports = {
   ],
   plugins: [
     require("@headlessui/tailwindcss"),
-    require('@tailwindcss/aspect-ratio')
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms')
   ],
   
 };
