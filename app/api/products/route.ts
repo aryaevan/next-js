@@ -48,7 +48,7 @@ export async function POST(request: Request) {
             const highlights = JSON.stringify(data.highlights);
             const details = data.details;
 
-            const res = await sql`
+            await sql`
                 INSERT INTO public.products
                 (name, price, href, description, images, breadcrumbs, colors, sizes, highlights, details)
                 VALUES(${name}, ${price}, ${href}, ${description}, ${images}, ${breadcrumbs}, ${colors}, ${sizes}, ${highlights}, ${details});`;
@@ -166,6 +166,7 @@ export async function DELETE(request: Request) {
             WHERE id = ${productId};`;
 
         if (res) {
+            console.log("delete result ",res);
             return new Response(
                 JSON.stringify({ message: 'Product deleted successfully' }),
                 {
