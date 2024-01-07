@@ -28,8 +28,8 @@
       }
     }
 
-    function editItemHandler(){
-
+    function editItemHandler(id:string){
+      window.location.replace(`/shop/edit?id=${id}`)
     }
 
     useEffect(() => {
@@ -63,7 +63,7 @@
                 {/* <a href={`/edit/${product.id}`}> */}
                   <button 
                     className="text-gray-100 hover:text-gray-200 bg-gray-700 bg-opacity-50 px-2 py-1 rounded"
-                    onClick={editItemHandler}
+                    onClick={()=>editItemHandler(product.id)}
                     >
                     <PencilSquareIcon className="h-6 w-6 text-gray-100 hover:text-yellow-400" />
                   </button>

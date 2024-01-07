@@ -18,7 +18,7 @@ export default function ProductOptions({product, reviews}: ProductOptionProps){
     const [selectedColor, setSelectedColor] = useState(product?.colors?.[0])
     const [selectedSize, setSelectedSize] = useState(product?.sizes?.[0])
 
-    console.log("product options data", product)
+    // console.log("product options data", product)
     return(
         <>
             <div className="mt-4 lg:row-span-3 lg:mt-0">
